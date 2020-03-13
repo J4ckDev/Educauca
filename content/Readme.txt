@@ -1,0 +1,1 @@
+Carpeta donde se guardarán los archivos de los cursos independiente del tipo que sea.

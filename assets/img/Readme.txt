@@ -1,0 +1,1 @@
+Aquí se guardarán todas las imagenes e iconos (si se deben descargar) para el sitio web
