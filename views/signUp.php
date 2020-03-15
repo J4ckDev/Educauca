@@ -11,36 +11,53 @@ include_once('layouts/body.php');
                     </a>
                 </div>
                 <div class="login-form">
-                     <form action="controlador/usuario.php" method="POST">
+                     <form action="" method="GET">
                         <div class="form-group">
-                            
-
-                        <label>NOMBRE COMPLETO</label>
+                        
+                        <label>NOMBRES</label>
                         <input type="text" class="form-control" name="nombre" onkeypress="return soloLetras(event)">
                             
 <!--                            <label>NOMBRE COMPLETO</label>
                             <input type="text" class="form-control" name="nombre" placeholder="Nombre completo">-->
                         </div>
                           <div class="form-group">
-                            <label>GENERO</label>
-                            <input type="text" class="form-control" name="apellido" placeholder="Genero" required="">
+                            <label>APELLIDOS</label>
+                            <input type="text" class="form-control" name="apellido" required>
                         </div>
                           <div class="form-group">
-                            <label>USUARIO</label>
-                            <input type="text" class="form-control" name="usuario" placeholder="Usuario" required="">
+                            <label>EDAD</label>
+                            <input type="text" class="form-control" name="edad" required>
                         </div>
                         <div class="form-group">
-                            <label>CORREO</label>
-                            <input type="email" class="form-control" name="email" placeholder="Correo" required="">
+                            <label>CORREO ElECTRÓNICO</label>
+                            <input type="email" class="form-control" name="email" required>
                         </div>
                         <div class="form-group">
                             <label>CONTRASEÑA</label>
-                            <input type="password" id="pass1" class="form-control" name="pass" placeholder="Contraseña" required="">
+                            <input type="password" class="form-control" name="pass" required>
                         </div>
-                          <div class="form-group">
-                            <label>CONFIRMAR CONTRASEÑA</label>
-                            <input type="password" id="pass2" class="form-control"  placeholder="Confirmar contraseña" required="">
-                        </div>
+                        <div class="form-group">
+                            <label>CÓDIGO</label>
+                            <input type="number" class="form-control" name="code" required>
+                        </div> 
+
+                            <input type="hidden" class="form-control" name="rol" value="3" required>
+
+                        <div class="form-group">
+                            <label>DISCAPACIDAD</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="dis" id="vis" value="1">
+                                <label class="form-check-label" for="vis">
+                                    Visual
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                <input class="form-check-input" type="radio" name="dis" id="aud" value="2">
+                                <label class="form-check-label" for="aud">
+                                    Auditiva
+                                </label>
+                            </div>
+                        </div>   
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" required=""> Acordar los términos y la política.
