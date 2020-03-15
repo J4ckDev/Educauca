@@ -5,7 +5,7 @@
  */
 require_once ('db.php');
 
-class Database
+class dbConect
 {
     /**
      * Única instancia de la clase
@@ -30,7 +30,7 @@ class Database
 
     /**
      * Retorna en la única instancia de la clase
-     * @return Database|null
+     * @return dbConect|null
      */
     public static function getInstance()
     {

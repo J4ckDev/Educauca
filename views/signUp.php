@@ -11,7 +11,7 @@ include_once('layouts/body.php');
                     </a>
                 </div>
                 <div class="login-form">
-                     <form action="" method="GET">
+                     <form action="../controllers/sesions.php" method="POST">
                         <div class="form-group">
                         
                         <label>NOMBRES</label>
