@@ -127,7 +127,7 @@
           </nav>
           <?php endif;?>
         <?php elseif (isset($_SESSION['rol'])): ?>
-          <?php if ($_SESSION['rol'] == '2'): ?>
+          <?php if ($_SESSION['rol'] == '2' || $_SESSION['rol'] == '1'): ?>
             <nav  id="barraBus" class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand">
               <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/Cat-icon.png" style="width: 50px;">

@@ -16,6 +16,9 @@ if (isset($_POST['username']) && isset($_POST['pwd'])) {
         else if($_SESSION['rol'] == '2') {
             header('location:../views/homeprof.php');
         }
+        else if($_SESSION['rol'] == '1') {
+            header('location:../views/homeadmin.php');
+        }
     } else {
         header('location:../');
     }
@@ -30,6 +33,9 @@ if (isset($_POST['username']) && isset($_POST['pwd'])) {
             }
             else if($_SESSION['rol'] == '2'){
                 header('location:../views/homeprof.php');
+            }
+            else if($_SESSION['rol'] == '1') {
+                header('location:../views/homeadmin.php');
             }
         } else {
             header('location:../views/signIn.php');
