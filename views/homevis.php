@@ -91,11 +91,11 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
               <?php foreach ($cursos as $pos => $curso) {?>
                 <div class="card" >
                   <div class="card-header" id="curso<?php echo $pos; ?>" style="background-color: black;">
-                    <h2 class="mb-0">
+                    
                       <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        <a class="text-white " id="<?php echo $curso['id']; ?>" onclick="square(this.id)"><?php echo $curso['name'];?></a>
+                        <a class="text-white " href="coursevis.php" id="<?php echo $curso['id']; ?>" onclick="square(this.id)"><h2><?php echo $curso['name'];?></h1></a>
                       </button>
-                    </h2>
+                    
                   </div>
                 </div>
               <?php  }?>

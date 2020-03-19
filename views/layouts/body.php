@@ -57,21 +57,23 @@
             </button>
             <div class="collapse navbar-collapse" id="contenidoBarra2">
               <ul class="navbar-nav mr-auto">
-                <form class="form-inline" method="POST" action="https://<?php echo $_SERVER['SERVER_NAME']; ?>/controllers/closeSession.php">
+                <form class="form-inline">
                   <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><h1 class="text-white">Educación, Inclusión y TIC</h1> </a>
                   </li>
                   &nbsp;&nbsp;
                   <li class="nav-item text-white">
-                    <button class="btn  btn-outline-dark my-4 my-sm-4 text-white" type="submit"><h4 style="display:inline;" id="vp" onclick="square(this.id)">Ver perfil</h4></button>
+                    <button class="btn  btn-outline-dark my-4 my-sm-4 text-white"><h4 style="display:inline;" id="vp" onclick="square(this.id)">Ver perfil</h4></button>
                   </li>
                   &nbsp;&nbsp;
                   <li>
-                    <button class="btn btn-outline-dark my-2 my-sm-4 text-white" type="submit"><h4 style="display:inline;" id="ep" onclick="square(this.id)">Editar perfil</h4></button>
+                    <button class="btn btn-outline-dark my-2 my-sm-4 text-white"><h4 style="display:inline;" id="ep" onclick="square(this.id)">Editar perfil</h4></button>
                   </li>
                   &nbsp;&nbsp;
                   <li>
-                    <button class="btn btn-outline-dark my-2 my-sm-4 text-white" type="submit"><h4 >Salir</h4></button>
+                    <button class="btn btn-outline-dark my-2 my-sm-4 text-white" style="display:inline;" type="submit">
+                    <h4 ><a href="../../controllers/closeSession.php" style="color: white;">Salir</a></h4>
+                    </button>
                   </li>
                   &nbsp;
                   &nbsp;
@@ -79,7 +81,7 @@
                   &nbsp;
                   <li>              
                     <input class="form-control mr-sm-4" type="search" placeholder="Nombre del Curso" aria-label="Search">
-                    <button class="btn btn-outline-dark my-4 my-sm-4 text-white" type="submit"><h4 style="display:inline;" id="buscar" onclick="square(this.id)">Buscar</h4></button>
+                    <button class="btn btn-outline-dark my-4 my-sm-4 text-white"><h4 style="display:inline;" id="buscar" onclick="square(this.id)">Buscar</h4></button>
                 </form>
                 </li>
               </ul>      
@@ -95,21 +97,21 @@
             </button>
             <div class="collapse navbar-collapse" id="contenidoBarra2">
               <ul class="navbar-nav mr-auto">
-                <form class="form-inline" method="POST" action="https://<?php echo $_SERVER['SERVER_NAME']; ?>/controllers/closeSession.php">
+                <form class="form-inline">
                   <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><h1 class="text-dark">Educación, Inclusión y TIC</h1> </a>
                   </li>
                   &nbsp;&nbsp;
                   <li class="nav-item text-white">
-                    <button class="btn  btn-outline-primary my-4 my-sm-4 text-dark" type="submit"><h4>Ver perfil</h4></button>
+                    <button class="btn  btn-outline-primary my-4 my-sm-4 text-dark"><h4>Ver perfil</h4></button>
                   </li>
                   &nbsp;&nbsp;
                   <li>
-                    <button class="btn btn-outline-primary my-2 my-sm-4 text-dark" type="submit"><h4>Editar perfil</h4></button>
+                    <button class="btn btn-outline-primary my-2 my-sm-4 text-dark"><h4>Editar perfil</h4></button>
                   </li>
                   &nbsp;&nbsp;
                   <li>
-                    <button class="btn btn-outline-primary my-2 my-sm-4 text-dark" type="submit"><h4>Salir</h4></button>
+                    <button class="btn btn-outline-primary my-2 my-sm-4 text-dark" type="submit"><h4><a href="../../controllers/closeSession.php" class="text-dark ;">Salir</a></h4></button>
                   </li>
                   &nbsp;
                   &nbsp;
@@ -117,7 +119,7 @@
                   &nbsp;
                   <li>              
                     <input class="form-control mr-sm-4" type="search" placeholder="Nombre del Curso" aria-label="Search">
-                    <button class="btn btn-outline-primary my-1 my-sm-1 color: text-dark" type="submit"><h4>Buscar</h4></button>
+                    <button class="btn btn-outline-primary my-1 my-sm-1 color: text-dark"><h4>Buscar</h4></button>
                 </form>
                 </li>
               </ul>      
