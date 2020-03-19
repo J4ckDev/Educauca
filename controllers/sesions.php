@@ -10,8 +10,11 @@ if (isset($_POST['username']) && isset($_POST['pwd'])) {
         if($_SESSION['discapacidad'] == '1'){
            header('location:../views/homevis.php');
         }
-        else{
+        else if($_SESSION['discapacidad'] == '2') {
             header('location:../views/homeaud.php');
+        }
+        else if($_SESSION['discapacidad'] == '3') {
+            header('location:../views/homeprof.php');
         }
     } else {
         header('location:../');
@@ -22,8 +25,11 @@ if (isset($_POST['username']) && isset($_POST['pwd'])) {
             if($_SESSION['discapacidad'] == '1'){
                header('location:../views/homevis.php');
             }
-            else{
+            else if($_SESSION['discapacidad'] == '2'){
                 header('location:../views/homeaud.php');
+            }
+            else if($_SESSION['discapacidad'] == '3'){
+                header('location:../views/homeprof.php');
             }
         } else {
             header('location:../views/signIn.php');
