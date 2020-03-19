@@ -57,7 +57,7 @@
             </button>
             <div class="collapse navbar-collapse" id="contenidoBarra2">
               <ul class="navbar-nav mr-auto">
-                <form class="form-inline">
+                <form class="form-inline" method="POST" action="https://<?php echo $_SERVER['SERVER_NAME']; ?>/controllers/closeSession.php">
                   <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><h1 class="text-white">Educación, Inclusión y TIC</h1> </a>
                   </li>
@@ -95,7 +95,7 @@
             </button>
             <div class="collapse navbar-collapse" id="contenidoBarra2">
               <ul class="navbar-nav mr-auto">
-                <form class="form-inline">
+                <form class="form-inline" method="POST" action="https://<?php echo $_SERVER['SERVER_NAME']; ?>/controllers/closeSession.php">
                   <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><h1 class="text-dark">Educación, Inclusión y TIC</h1> </a>
                   </li>
