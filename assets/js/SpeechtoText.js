@@ -69,10 +69,10 @@ window.onload = function () {
 
         //if (interimResult.indexOf('terminar') != -1)
         //    recognition.stop();
-        if (document.getElementById('mic').getAttribute('class')=='stop') {
+        if (document.getElementById('mic').getAttribute('class')=='mx-auto stop') {
             recognition.stop();
             document.getElementById('mic').setAttribute('class','');
-            document.getElementById('mic').setAttribute('class','listen');
+            document.getElementById('mic').setAttribute('class','mx-auto listen');
         }            
     };
 
