@@ -118,6 +118,35 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
                   es un sistema de dos cargas de signo opuesto e igual magnitud cercanas entre sí.
                   En este apartado encontrarás material de referencia para tu estudio. Éxitos. </p>
                 </span>
+               <div>
+                 <h1>Material de trabajo</h1>
+                              <table>
+                                  <tr>
+                                      <td>Titulo</td>
+                                      <td>Descripción</td>
+                                      <td>Nombre</td>
+                                  </tr>
+                              <?php
+                              include '../controllers/config.inc.php';
+                              $db=new Conect_MySql();
+                                  $sql = "select*from tbl_documentos";
+                                  $query = $db->execute($sql);
+                                  while($datos=$db->fetch_row($query)){?>
+                                  <tr>
+                                      <td><?php echo $datos['titulo']; ?></td>
+                                      <td><?php echo $datos['descripcion']; ?></td>
+                                      <td><a href="../controllers/archivo.php?id=<?php echo $datos['id_documento']?>" target="_blank"><?php echo $datos['nombre_archivo']; ?></a></td>
+                                  </tr>
+                                      
+                                <?php  } ?>
+                                  
+                              </table>
+                              </br>
+                </div>
+                <span class="border border-white"></span>
+                <div class="card" style="color: white; background-color:  black;">
+                  <p>Lector Online de Documentos: <a href="https://www.naturalreaders.com/online/" target="_blank"> Click Aquí</a> </p>
+                </div>
               </div>
             
           </div>

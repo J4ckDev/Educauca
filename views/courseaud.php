@@ -111,7 +111,36 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
                 <div>
                     <h2 class="display-4">Clase de Hoy</h2>
                     <div class="card">
-                        <p>aki va el speach del teacher</p>
+                    <span class="border border-white"></span>
+                  <h1>Dipolos</h1>
+                  <p>Buenos días alumno, en la clase de hoy conoceremos que son y por qué son importantes los dipolos eléctricos. 
+                  Las líneas de campo eléctrico para dos cargas puntuales de igual magnitud pero de signos opuestos son conocidas como dipolo eléctrico,
+                  es un sistema de dos cargas de signo opuesto e igual magnitud cercanas entre sí.
+                  En este apartado encontrarás material de referencia para tu estudio. Éxitos. </p>
+                  </span>
+                  <h1>Material de trabajo</h1>
+                              <table>
+                                  <tr>
+                                      <td><em>Titulo</em></td>
+                                      <td><em>Descripción</em></td>
+                                      <td><em>Nombre<em></td>
+                                  </tr>
+                              <?php
+                              include '../controllers/config.inc.php';
+                              $db=new Conect_MySql();
+                                  $sql = "select*from tbl_documentos";
+                                  $query = $db->execute($sql);
+                                  while($datos=$db->fetch_row($query)){?>
+                                  <tr>
+                                      <td><?php echo $datos['titulo']; ?></td>
+                                      <td><?php echo $datos['descripcion']; ?></td>
+                                      <td><a href="../controllers/archivo.php?id=<?php echo $datos['id_documento']?>" target="_blank"><?php echo $datos['nombre_archivo']; ?></a></td>
+                                  </tr>
+                                      
+                                <?php  } ?>
+                                  
+                              </table>
+                              </br>
                     </div>
                 </div>
           </div>
