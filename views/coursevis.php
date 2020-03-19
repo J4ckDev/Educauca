@@ -14,7 +14,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
 <div class="container" id="containerSub">
   <div class="row">
     <div class="col">
-      <section id="tituloMasCursos"><h2>Mas Cursos</h2>
+      <section id="tituloMasCursos"><h2 id="m1" onclick="square(this.id)">Más Cursos</h2>
           
           <div class="accordion" id="categorias">
 
@@ -32,7 +32,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
                 <div class="card-header" id="curso3">
                   <h2 class="mb-0">
                     <button class="btn btn-outline-light collapsed" type="button" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      <h2 id="materia2">MediosTx</h2>
+                      <h2 id="materia2">TTL2</h2>
                     </button>
                   </h2>
                 </div>
@@ -41,7 +41,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
               <nav class="navbar navbar-black bg-dark">
                   <form class="form-inline">
                     <input class="form-control mr-sm-2" type="search" placeholder="Buscar mas cursos" aria-label="Search"> 
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit" id="buscar">Buscar</button>
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit" id="buscar" onclick="square(this.id)">Buscar</button>
                   </form>
                 </nav>
               <br> 
@@ -49,15 +49,15 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
 
         <div class="card" style="width: 18rem;">
           <div class="card-body" style="background-color: black;" >
-            <h3 class="card-title" style="color:white;" >Mis últimas insignias</h3>
-            <p class="lead text-white">Aqui podras encontrar las insignias que hayas conseguido</p>
+            <h3 class="card-title" style="color:white;" id="ins" onclick="square(this.id)" >Mis últimas insignias</h3>
+            <p class="lead text-white" id="dins" onclick="square(this.id)">Aquí podras encontrar las insignias que hayas conseguido</p>
             <a href="#" class="card-link"><h3 style="color: white;">Insignias</h3></a>
           </div>
         </div>
     </div>
 
     <div class="col-6">
-        <h2 class="display-4" style="color: white;">Temas</h2>
+        <h2 class="display-4" style="color: white;" id="temas" onclick="square(this.id)">Temas</h2>
         <div class="card">
           <div class="card-header" id="tema1" style="width: 33.57rem; background-color: black;" >
               <h2 class="mb-0">                      
@@ -110,9 +110,13 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
           <div>
               <h2 class="display-4" style="color:whitesmoke;">Clase de Hoy</h2>
               
-              <div class="card" style="color: white; background-color:  black;">
+              <div class="card" style="color: white; background-color:  black;" id="box">
                 <span class="border border-white"></span>
-                  <p>aki va el speach del teacher</p>
+                  <h1>Dipolos</h1>
+                  <p>Buenos días alumno, en la clase de hoy conoceremos que son y por qué son importantes los dipolos eléctricos. 
+                  Las líneas de campo eléctrico para dos cargas puntuales de igual magnitud pero de signos opuestos son conocidas como dipolo eléctrico,
+                  es un sistema de dos cargas de signo opuesto e igual magnitud cercanas entre sí.
+                  En este apartado encontrarás material de referencia para tu estudio. Éxitos. </p>
                 </span>
               </div>
             
@@ -122,7 +126,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
     <div class="col">
       
       <p class="card-text">
-        <h2 style="color: white;">Navegación</h2>
+        <h2 style="color: white;" id="nav" onclick="square(this.id)">Navegación</h2>
         <div class="accordion" id="categorias">
 
           <div class="card">
@@ -167,8 +171,8 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
           <br>
           <div class="card" style="width: 13rem;">
             <div class="card-body" style="background-color: black;">
-              <h3 class="card-title" style="color: white;" >Actividad Reciente</h3>
-              <p class="lead text-white">Aqui podras encontrar la actividad que hayas realizado recientemente</p>
+              <h3 class="card-title" style="color: white;" id="act" onclick="square(this.id)">Actividad Reciente</h3>
+              <p class="lead text-white" id="dact" onclick="square(this.id)">Aquí podras encontrar la actividad que hayas realizado recientemente</p>
               <a href="#" class="card-link" style="color: white;"><h5>Actividad Reciente</h5></a>
             </div>
           </div>
@@ -181,6 +185,57 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
 </div>
 
 </section>
+<style>
+#box {
+  background-color: black;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+}
+</style>
+<script src="https://webreader.naturalreaders.com/nr-webreader.js" defer></script>
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+        if (typeof NRWebReader != 'undefined') {
+            window['NRWebReader'] = new NRWebReader({
+            widget_id: "r8qq12ikvx",  // DO NOT REMOVE. This is your widget ID for your WebReader
+            icon: {
+            //    icon_name: "speaker", /*Optional: Alternative icon to show as the widget icon*/
+            //    icon_position: "bottom-left", /*Optional: Position for the the widget to show up at*/
+            //    icon_position_offsets: {/*Optional: Custom position offsets for the the widget to show up at*/
+            //        left:""
+            //        right:""
+            //        top:""
+            //        bottom:""
+            //    }
+            //    icon_color: "#0555B8", /*Optional: Color of the icon*/
+            //    icon_size: {width: "60px", height: "60px"}, /*Optional: icon size. Above 50px is recommended.*/
+            //    text_box: true, /*Optional: false if you don't want to have a greeting text box*/
+            //    text_box_greeting: "Listen", /*Optional: Your greeting text in the text box*/
+            //    text_box_background_color: "#ffffff", /*Optional: Background color of text box*/
+            //    text_box_font_color: "#0555B8", /*Optional: Color of the icon*/
+            //    text_box_font_size: "18px", /*Optional: Font size of the text in text box*/
+            //    show_in_mobile: true, /*Optional: false if you don't want the widget to show up on mobile*/
+            //    mob_icon_position: "bottom-left", /*Optional: Position for the the widget to show up at on mobile*/
+            //    mob_icon_position_offsets: {/*Optional: Custom position offsets for the the widget to show up at on mobile*/
+            //        left:""
+            //        right:""
+            //        top:""
+            //        bottom:""
+            //    }
+            //    mob_icon_size: {width: "30px", height: "30px"}, /*Optional: icon size on mobile. Above 30px is recommended.*/
+            //    mob_text_box: false /*Optional: false if you don't want to have a greeting text box on mobile*/
+            },
+            bar : {
+            //    settings_default_voice: "Matthew *", /*Optional: Default voice for TTS*/
+            //    settings_default_speed: 1, /*Optional: Default speed for TTS*/
+            //    settings_highlight_colour_scheme: "dark" /*Optional: Default color scheme for highlighting text being read on page*/
+            },
+            custom_text_source: "#box" /*Optional: only read the text inside the HTML element with the id or class */
+            });
+        }
+    }); 
+</script> 
 
 <?php
 include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/footer.php');
