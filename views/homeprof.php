@@ -114,7 +114,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
           <div class="card">
             <div class="card-header" id="curso2">
               <h2 class="mb-0">
-                  <h2>dipolo</h2>
+                  <h2>Dipolo</h2>
                   <button type="button" class="btn btn-outline-primary">subir documentacion</button>
               </h2>
             </div>
@@ -148,17 +148,24 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
               <h2 class="display-4">Clase de Hoy</h2>
               <div class="card">
                   <h5>Aquí se sube la documentación correspondiente a la clase de Hoy</h5>
-                  <div class="dropdown">
-                      <button type="button" class="btn btn-outline-primary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
-                        Mis cursos
-                      </button>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
-                        <a class="dropdown-item" href="#">TTL1</a>
-                        <a class="dropdown-item" href="#">Enfasis II</a>
-                        <a class="dropdown-item" href="#">MediosTX</a>
-                      </div>
-                  <button type="button" class="btn btn-outline-primary">subir documentacion</button>
-              </div>
+                  <form method="post" action="" enctype="multipart/form-data">
+                <table>
+                    <tr>
+                        <td><label>Titulo</label></td>
+                        <td><input type="text" name="titulo"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Descripción</label></td>
+                        <td><textarea name="descripcion"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="file" name="archivo"></td>
+                    <tr>
+                        <td><input type="submit" value="subir" name="subir"></td>
+                    </tr>
+                </table>
+            </form>
+
           </div>
     </div>
     </div>
@@ -174,7 +181,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
             <div class="card-header" id="curso1">
               <h2 class="mb-0">
                 <button class="btn btn-link" type="button" href="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  pagina principal
+                  Página principal
                 </button>
               </h2>
           </div>
@@ -183,7 +190,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
             <div class="card-header" id="curso2">
               <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  participantes
+                  Participantes
                 </button>
               </h2>
             </div>
@@ -226,26 +233,5 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
 
 </section>
 
-
-        <div style="width: 500px;margin: auto;border: 1px solid blue;padding: 30px;">
-            <h4>Subir PDF</h4>
-            <form method="post" action="" enctype="multipart/form-data">
-                <table>
-                    <tr>
-                        <td><label>Titulo</label></td>
-                        <td><input type="text" name="titulo"></td>
-                    </tr>
-                    <tr>
-                        <td><label>Descripcion</label></td>
-                        <td><textarea name="descripcion"></textarea></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><input type="file" name="archivo"></td>
-                    <tr>
-                        <td><input type="submit" value="subir" name="subir"></td>
-                    </tr>
-                </table>
-            </form>            
-        </div>
 <?php
 include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/footer.php');
