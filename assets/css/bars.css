@@ -2,9 +2,6 @@
     width:  80px;
     height: 80px;
 }
-#barraBus img {
-    width: 50px;
-}
 #formNav button:hover{
     background-color: aliceblue !important;
 }

@@ -30,6 +30,7 @@ class queries{
         }
         return false;
     }
+
     public static function signIn($email,$pwd){
         $query = "SELECT * FROM usuarios WHERE email=:email";
         try {
@@ -60,4 +61,44 @@ class queries{
         }
         return false;
     }
+
+    //Cursos, Secciones, Subsecciones e Matricula Cursos.
+
+    public function newCourse($name,$description,$teacher,$pass)
+    {
+        $query = "INSERT INTO cursos (name,description,teacher,pass) VALUES (:name,:description,:teacher,:pass)";
+        try {
+            //Crear el hash de la contraseñas
+            $password = password_hash($pass, PASSWORD_BCRYPT);
+            // Preparar sentencia
+            $comando = dbConect::getInstance()->getDb()->prepare($query);
+            $comando -> bindParam(':name',$name,PDO::PARAM_STR);
+            $comando -> bindParam(':description',$description,PDO::PARAM_STR);
+            $comando -> bindParam(':teacher',$teacher,PDO::PARAM_STR);
+            $comando -> bindParam(':pass',$pass,PDO::PARAM_STR);
+            // Ejecutar sentencia preparada
+            $comando->execute();
+            return true;
+        } catch (PDOException $e) {
+            
+        }
+        return false;
+    }
+
+    public function getCourse($name)
+    {
+        $query = "SELECT * FROM cursos WHERE name=:name";
+        try {
+            // Preparar sentencia
+            $comando = dbConect::getInstance()->getDb()->prepare($query);
+            // Ejecutar sentencia preparada
+            $comando->bindParam(':name',$name,PDO::PARAM_STR);
+            $comando->execute();
+            return $comando -> fetchAll(PDO::FETCH_ASSOC);            
+        } catch (PDOException $e) {
+            
+        }
+        return false;
+    }
+
 }

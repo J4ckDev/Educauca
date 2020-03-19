@@ -6,7 +6,7 @@
             <h1 class="text-white">EduCauca| <small class="text-muted">Universidad del Cauca</small></h1> 
             <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/Cat-icon.png" class="d-inline-block align-top" alt="" >
             </nav>
-        </section id="barraBus">
+        </section >
         <?php if (empty($_SESSION['email'])):?>
           <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #acbddd;">
             <a class="navbar-brand" href="#">

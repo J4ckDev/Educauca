@@ -1,0 +1,24 @@
+#imagenNav img {
+    width:  80px;
+    height: 80px;
+}
+#barraBus {
+    background-color: rgb(4, 7, 43);
+}
+#formNav button:hover{
+    background-color: aliceblue !important;
+}
+#barranav{
+    background-color: #1d2355;
+}
+
+#main{
+    background-color: #e8edf7;
+}
+#imagenNav2{
+    background-color: rgb(4, 7, 43);
+}
+#imagenNav2 img {
+    width:  80px;
+    height: 80px;
+}
