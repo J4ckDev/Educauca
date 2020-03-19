@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 include_once '../controllers/config.inc.php';
 if (isset($_POST['subir'])) {
     $nombre = $_FILES['archivo']['name'];
