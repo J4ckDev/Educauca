@@ -14,7 +14,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
       
       <div class="container">
         <div class="row">
-          <div class="col bg-dark" style="background-color: black;">
+          <div class="col" style="background-color: black;">
             <section id="tituloBienv" style="color: white;"><h2>Bienvenidos!!</h2></section>
             
             <div class="card" style="width: 18rem; ">

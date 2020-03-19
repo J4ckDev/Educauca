@@ -43,7 +43,7 @@
             </div>
           </nav>
         <?php elseif (isset($_SESSION['discapacidad'])): ?>
-
+          <?php if ($_SESSION['discapacidad']=='1'):?>
           <nav  id="barraBus" class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand">
               <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/catWhite.png" style="width: 50px;">
@@ -81,5 +81,44 @@
               </ul>      
             </div>
           </nav>
+          <?php else:?>
+            <nav  id="barraBus" class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand">
+              <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/Cat-icon.png" style="width: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="contenidoBarra2">
+              <ul class="navbar-nav mr-auto">
+                <form class="form-inline">
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><h1 class="text-dark">Educación, Inclusión y TIC</h1> </a>
+                  </li>
+                  &nbsp;&nbsp;
+                  <li class="nav-item text-white">
+                    <button class="btn  btn-outline-primary my-4 my-sm-4 text-dark" type="submit"><h4>Ver perfil</h4></button>
+                  </li>
+                  &nbsp;&nbsp;
+                  <li>
+                    <button class="btn btn-outline-primary my-2 my-sm-4 text-dark" type="submit"><h4>Editar perfil</h4></button>
+                  </li>
+                  &nbsp;&nbsp;
+                  <li>
+                    <button class="btn btn-outline-primary my-2 my-sm-4 text-dark" type="submit"><h4>Salir</h4></button>
+                  </li>
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  <li>              
+                    <input class="form-control mr-sm-4" type="search" placeholder="Nombre del Curso" aria-label="Search">
+                    <button class="btn btn-outline-primary my-1 my-sm-1 color: text-dark" type="submit"><h4>Buscar</h4></button>
+                </form>
+                </li>
+              </ul>      
+            </div>
+          </nav>
+          <?php endif;?>
         <?php endif;?> 
     </section>

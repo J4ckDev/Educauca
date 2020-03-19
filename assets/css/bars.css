@@ -2,6 +2,9 @@
     width:  80px;
     height: 80px;
 }
+#barraBus {
+    background-color: #92b0e0;
+}
 #formNav button:hover{
     background-color: aliceblue !important;
 }
