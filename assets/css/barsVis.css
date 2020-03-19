@@ -11,7 +11,19 @@
 #barranav{
     background-color: #1d2355;
 }
+#colorBarraBus {
+    background-color:  #1d2355;
+}
+#colorBarraBus img{
+    width: 50px;
+}
+#contenedor {
+    background-color: rgb(0, 0, 0);
+}
 
+#containerSub{
+     width: 1440px;
+}
 #main{
     background-color: #e8edf7;
 }
@@ -21,4 +33,36 @@
 #imagenNav2 img {
     width:  80px;
     height: 80px;
+}
+#PaginaPrincipal{
+    background-color: black;
+}
+#cursoActual{
+    background-color: black;
+}
+#MisCursos{
+    background-color: black;
+}
+#tituloMasCursos{
+    color: white;
+}
+#curso1 {
+    color: white;
+    background-color: black;
+}
+#tema1 {
+    background-color:black;
+}
+#tema2 {
+    background-color: black;
+}
+#tema3{
+    background-color: black;
+}
+#curso2 {
+    color: white;
+    background-color: black;
+}
+#curso3{
+    background-color: black;
 }

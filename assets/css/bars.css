@@ -9,14 +9,22 @@
     background-color: aliceblue !important;
 }
 #barranav{
-    background-color: #00179b;
+    background-color: #152572;
 }
-
+#contenedor {
+    background-color: rgb(218, 237, 245);
+}
+#containerSub{
+     width: 1440px;
+}
+#colorBarraBus img{
+    width: 50px;
+}
 #main{
     background-color: #e8edf7;
 }
 #imagenNav2{
-    background-color: #00179b;
+    background-color: #152572;
 }
 #imagenNav2 img {
     width:  80px;
