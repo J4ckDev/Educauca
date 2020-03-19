@@ -161,7 +161,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
                             <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
                           </div>
                           
-                          <input class="btn btn-primary" type="submit" value="Asignarr">
+                          <input class="btn btn-primary" type="submit" value="Asignar">
                     </div> 
                 </div>
           </div>
