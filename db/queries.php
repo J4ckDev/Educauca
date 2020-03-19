@@ -66,7 +66,7 @@ class queries{
 
     public function newCourse($name,$description,$teacher,$pass)
     {
-        $query = "INSERT INTO cursos (name,description,teacher,pass) VALUES (:name,:description,:teacher,:pass)";
+        $query = "INSERT INTO cursos (name,description,idTeacher,pass) VALUES (:name,:description,:teacher,:pass)";
         try {
             //Crear el hash de la contraseñas
             $password = password_hash($pass, PASSWORD_BCRYPT);
@@ -74,7 +74,7 @@ class queries{
             $comando = dbConect::getInstance()->getDb()->prepare($query);
             $comando -> bindParam(':name',$name,PDO::PARAM_STR);
             $comando -> bindParam(':description',$description,PDO::PARAM_STR);
-            $comando -> bindParam(':teacher',$teacher,PDO::PARAM_STR);
+            $comando -> bindParam(':idTeacher',$teacher,PDO::PARAM_STR);
             $comando -> bindParam(':pass',$pass,PDO::PARAM_STR);
             // Ejecutar sentencia preparada
             $comando->execute();
@@ -85,14 +85,13 @@ class queries{
         return false;
     }
 
-    public function getCourse($name)
+    public function getCourses()
     {
-        $query = "SELECT * FROM cursos WHERE name=:name";
+        $query = "SELECT * FROM cursos";
         try {
             // Preparar sentencia
             $comando = dbConect::getInstance()->getDb()->prepare($query);
             // Ejecutar sentencia preparada
-            $comando->bindParam(':name',$name,PDO::PARAM_STR);
             $comando->execute();
             return $comando -> fetchAll(PDO::FETCH_ASSOC);            
         } catch (PDOException $e) {

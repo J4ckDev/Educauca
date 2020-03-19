@@ -1,9 +1,13 @@
 <?php
 session_start();
 
+include_once('../db/queries.php');
+
 if (empty($_SESSION["email"])) {
     header('Location:../');
 }
+
+$cursos = queries::getCourses();
 
 include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/head.php');
 include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
@@ -84,51 +88,18 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
             <p class="card-text">
               <h2 class="text-white " id="Cursos" onclick="square(this.id)">Cursos</h2>
               <div class="accordion" id="categorias">
-
+              <?php foreach ($cursos as $pos => $curso) {?>
                 <div class="card" >
-                  <div class="card-header" id="curso1" style="background-color: black;">
+                  <div class="card-header" id="curso<?php echo $pos; ?>" style="background-color: black;">
                     <h2 class="mb-0">
                       <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        <h2  class="text-white " id="ttl1" onclick="square(this.id)">TTL 1</h2>
+                        <a class="text-white " id="<?php echo $curso['id']; ?>" onclick="square(this.id)"><?php echo $curso['name'];?></a>
                       </button>
                     </h2>
                   </div>
-                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample" style="background-color: black; color: white;">
-                    <div class="card-body" >
-                      <h3></h3>
-                    </div>
-                  </div>
                 </div>
-
-                <div class="card" >  
-                  <div class="card-header" id="curso2" style="background-color: black; color: white;">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <h2  class="text-white " id="enf2" onclick="square(this.id)">Énfasis 2</h2>
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body" style="background-color: black; color: white;">
-                      <h3></h3>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card" >
-                  <div class="card-header" id="curso3" style="background-color: black; color: white;">
-                    <h2 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <h2 class="text-white " id="mtx" onclick="square(this.id)">MediosTx</h2>
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body" style="background-color: black;" >
-                      <h3></h3>
-                    </div>
-                  </div>
-                </div>
+              <?php  }?>
+              </div>
               <br><br>
                   <div class="card" style="width: 13rem;">
                     <div class="card-body" style="background-color: black; color: white;">

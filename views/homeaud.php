@@ -1,9 +1,13 @@
 <?php
 session_start();
 
+include_once('../db/queries.php');
+
 if (empty($_SESSION["email"])) {
     header('Location:../');
 }
+
+$cursos = queries::getCourses();
 
 include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/head.php');
 include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
@@ -83,50 +87,18 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
       <p class="card-text">
         <h2>Cursos</h2>
         <div class="accordion" id="categorias">
-
+        <?php foreach ($cursos as $pos => $curso) {?>
           <div class="card">
               <span class="border border-light"></span>
-            <div class="card-header" id="curso1">
+            <div class="card-header" id="curso<?php echo $pos; ?>">
               <h2 class="mb-0">
                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <h2>TTL1</h2>
+                  <a ><h2><?php echo $curso['name'];?></h2></a>
                 </button>
               </h2>
             </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-             
-            </div>
           </div>
-
-          <div class="card">
-            <div class="card-header" id="curso2">
-              <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <h2>Enfasis II</h2>
-                </button>
-              </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-              <div class="card-body">
-                <h3>Breve descripcion del curso 2</h3>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header" id="curso3">
-              <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <h2>MediosTx</h2>
-                </button>
-              </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-              <div class="card-body">
-                <h3>Breve descripcion del curso 3</h3>
-              </div>
-            </div>
-          </div>
+          <?php  }?>
           <br>
           <div class="card" style="width: 13rem;">
             <div class="card-body">
