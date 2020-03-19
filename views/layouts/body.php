@@ -1,4 +1,8 @@
 <body>
+  <style>
+    .vis {
+    }
+  </style>
     <section id="barranav">
         <section id="imagenNav">
             <nav class="navbar navbar-dark">
@@ -59,15 +63,15 @@
                   </li>
                   &nbsp;&nbsp;
                   <li class="nav-item text-white">
-                    <button class="btn  btn-outline-dark my-4 my-sm-4 text-white" type="submit"><h4>Ver perfil</h4></button>
+                    <button class="btn  btn-outline-dark my-4 my-sm-4 text-white" type="submit"><h4 style="display:inline;" id="vp" onclick="square(this.id)">Ver perfil</h4></button>
                   </li>
                   &nbsp;&nbsp;
                   <li>
-                    <button class="btn btn-outline-dark my-2 my-sm-4 text-white" type="submit"><h4>Editar perfil</h4></button>
+                    <button class="btn btn-outline-dark my-2 my-sm-4 text-white" type="submit"><h4 style="display:inline;" id="ep" onclick="square(this.id)">Editar perfil</h4></button>
                   </li>
                   &nbsp;&nbsp;
                   <li>
-                    <button class="btn btn-outline-dark my-2 my-sm-4 text-white" type="submit"><h4>Salir</h4></button>
+                    <button class="btn btn-outline-dark my-2 my-sm-4 text-white" type="submit"><h4 >Salir</h4></button>
                   </li>
                   &nbsp;
                   &nbsp;
@@ -75,7 +79,7 @@
                   &nbsp;
                   <li>              
                     <input class="form-control mr-sm-4" type="search" placeholder="Nombre del Curso" aria-label="Search">
-                    <button class="btn btn-outline-dark my-4 my-sm-4 text-white" type="submit"><h4>Buscar</h4></button>
+                    <button class="btn btn-outline-dark my-4 my-sm-4 text-white" type="submit"><h4 style="display:inline;" id="buscar" onclick="square(this.id)">Buscar</h4></button>
                 </form>
                 </li>
               </ul>      
