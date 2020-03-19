@@ -141,6 +141,8 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
                                   
                               </table>
                               </br>
+                    <textarea id="areaResult"></textarea>
+                    <div id="mic" class="mx-auto listen"><i id="micro" class="fas fa-microphone"></i></div>
                     </div>
                 </div>
           </div>

@@ -9,11 +9,16 @@
     <?php else:?>
         <link rel="stylesheet" href= "https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/css/bars.css">
     <?php endif?>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <?php if (isset($_SESSION['discapacidad']) && $_SESSION['discapacidad']=='1'):?>
-        <script src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/js/speech.js"></script>
-    <?php endif?>    
+    <?php if (isset($_SESSION['discapacidad'])):?>
+        <?php if ($_SESSION['discapacidad']=='1'):?>
+            <script src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/js/speech.js"></script>
+        <?php elseif ($_SESSION['discapacidad']=='2'):?>
+            <script src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/js/SpeechtoText.js"></script>
+        <?php endif;?>
+    <?php endif;?>    
     <title>Educauca</title>
 </head>
