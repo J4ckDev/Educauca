@@ -111,7 +111,8 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
                 <div>
                     <h2 class="display-4">Clase de Hoy</h2>
                     <div class="card">
-                        <p>aki va el speach del teacher</p>
+                    <textarea id="areaResult"></textarea>
+                    <div id="mic" class="mx-auto listen"><i id="micro" class="fas fa-microphone"></i></div>
                     </div>
                 </div>
           </div>
