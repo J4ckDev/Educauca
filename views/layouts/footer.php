@@ -10,7 +10,11 @@
                 Basado en un tema original|moodle.org
                 </blockquote>
             </h4> 
-                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/Cat-icon.png" class="d-inline-block align-top mx-auto" alt="" >
+            <?php if (isset($_SESSION['discapacidad'])):?>
+              <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/<?php echo $_SESSION['discapacidad'] == '1' ? 'catWhite.png' : 'Cat-icon.png' ?>" class="d-inline-block align-top mx-auto" alt="" >
+            <?php else:?>
+              <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/Cat-icon.png" class="d-inline-block align-top mx-auto" alt="" >
+            <?php endif?>
             </nav>
         </footer>
     </body>

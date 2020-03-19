@@ -4,13 +4,22 @@
             <nav class="navbar navbar-dark">
             <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/Escudo_Unicauca2.png" class="d-inline-block align-top" alt="" >
             <h1 class="text-white">EduCauca| <small class="text-muted">Universidad del Cauca</small></h1> 
-            <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/Cat-icon.png" class="d-inline-block align-top" alt="" >
+            <?php if (isset($_SESSION['discapacidad'])):?>
+              <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/<?php echo $_SESSION['discapacidad'] == '1' ? 'catWhite.png' : 'Cat-icon.png' ?>" class="d-inline-block align-top" alt="" >
+            <?php else:?>
+              <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/Cat-icon.png" class="d-inline-block align-top" alt="" >
+            <?php endif?>
+            
             </nav>
         </section >
         <?php if (empty($_SESSION['email'])):?>
           <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #acbddd;">
             <a class="navbar-brand" href="#">
-                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/Cat-icon.png" style="width: 50px;">
+              <?php if (isset($_SESSION['discapacidad'])):?>
+                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/<?php echo $_SESSION['discapacidad'] == '1' ? 'catWhite.png' : 'Cat-icon.png' ?>" class="d-inline-block align-top" alt="" style="width: 50px;">
+              <?php else:?>
+                <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/Cat-icon.png" class="d-inline-block align-top" alt="" style="width: 50px;">
+              <?php endif?>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -31,6 +40,45 @@
                   </div>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: black; border-color: black;" id="butonNav">Ingresar</button>
               </form>
+            </div>
+          </nav>
+        <?php elseif (isset($_SESSION['discapacidad'])): ?>
+
+          <nav  id="barraBus" class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand">
+              <img src="https://<?php echo $_SERVER['SERVER_NAME']; ?>/assets/img/catWhite.png" style="width: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="contenidoBarra2">
+              <ul class="navbar-nav mr-auto">
+                <form class="form-inline">
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><h1 class="text-white">Educación, Inclusión y TIC</h1> </a>
+                  </li>
+                  &nbsp;&nbsp;
+                  <li class="nav-item text-white">
+                    <button class="btn  btn-outline-dark my-4 my-sm-4 text-white" type="submit"><h4>Ver perfil</h4></button>
+                  </li>
+                  &nbsp;&nbsp;
+                  <li>
+                    <button class="btn btn-outline-dark my-2 my-sm-4 text-white" type="submit"><h4>Editar perfil</h4></button>
+                  </li>
+                  &nbsp;&nbsp;
+                  <li>
+                    <button class="btn btn-outline-dark my-2 my-sm-4 text-white" type="submit"><h4>Salir</h4></button>
+                  </li>
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  <li>              
+                    <input class="form-control mr-sm-4" type="search" placeholder="Nombre del Curso" aria-label="Search">
+                    <button class="btn btn-outline-dark my-4 my-sm-4 text-white" type="submit"><h4>Buscar</h4></button>
+                </form>
+                </li>
+              </ul>      
             </div>
           </nav>
         <?php endif;?> 
