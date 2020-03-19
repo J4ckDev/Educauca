@@ -93,7 +93,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
             <div class="card-header" id="curso<?php echo $pos; ?>">
               <h2 class="mb-0">
                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <a ><h2><?php echo $curso['name'];?></h2></a>
+                  <a href="courseaud.php"><h2><?php echo $curso['name'];?></h2></a>
                 </button>
               </h2>
             </div>

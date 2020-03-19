@@ -134,7 +134,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
             <div class="card-header" id="PaginaPrincipal">
               <h2 class="mb-0">
                 <button class="btn btn-outline-light" type="button" href="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  pagina principal
+                  <a href="homevis.php" style="color: white;">Página principal</a>
                 </button>
               </h2>
           </div>
