@@ -94,9 +94,7 @@ include_once($_SERVER['DOCUMENT_ROOT'] . '/views/layouts/body.php');
               </h2>
             </div>
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <div class="card-body">
-                <h3>Breve descripcion del curso TTL1</h3>
-              </div>
+             
             </div>
           </div>
 
